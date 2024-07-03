@@ -41,6 +41,12 @@ h1{
         margin-top: 1rem;
     }
 }
+@media(max-width:790px) {
+    .payments{
+        align-items: center;
+        flex-direction: column;
+    }
+}
 .offerButton{
     padding: 1rem;
     border: 1px rgb(3, 146, 207);
@@ -89,6 +95,26 @@ h1{
         }
     }
 }
+@media(max-width:1200px) {
+    .header{
+        align-items: center;
+        
+        flex-direction: column;
+    }
+}
+@media(max-width:660px){
+    .headerImages{
+        img{
+            width: 350px;
+            
+        }
+    }
+    .headline{
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+}
 .cardsContainer{
     max-width: 60vw;
     margin: auto;
@@ -102,7 +128,7 @@ h1{
     }
     .cards{
         display: grid;
-        grid-auto-flow: column;
+        grid-template-columns: auto auto auto auto auto auto;
         text-align: left;
         .card{
             background-color: rgba(0,0,77,1);
@@ -125,6 +151,17 @@ h1{
         }
         
     }
+    @media (max-width:1960px) {
+        
+        .cards{
+            grid-template-columns: auto auto ;
+        }
+    }
+    @media(max-width: 700px) {
+        .cards{
+            grid-template-columns: auto
+        }
+    }
 }
 .benefits{
     @extend .cardsContainer;
@@ -136,6 +173,7 @@ h1{
     margin-top: 35rem;
     .values{
         display: flex;
+        align-items: center;
     }
     .leftValues{
         text-align: right;
@@ -151,24 +189,47 @@ h1{
             text-decoration: line-through;
             color: #d3d1d1;
         }
+        .payments{
+            flex-direction: column;
+        }
     }
     .leftValues, .rightValues{
-        padding: 1rem;
-        margin: 7rem 0 7rem 1rem;
+        margin: 1rem;
+    }
+    @media(max-width:125rem) {
+        .values{
+            flex-direction: column;
+            text-align: center;
+            
+            
+        }
+        .leftValues{
+            text-align: center;
+        }
+        .rightValues{
+            text-align: center;
+        }
+        
+    }
+    @media(max-width: 515px){
+        .midValues{
+            
+            padding: 0 2rem 0 2rem;
+        }
     }
 }
 .faqContainer{
-    
-    background-color: rgb(0, 0, 80);
     margin-top: 40rem;
     text-align: center;
     padding: 1rem;
-    
     .faqs{
         text-align: left;
         max-width: 50vw;
         margin: auto;
         padding: 0.5rem;
+        h3{
+            cursor: pointer;
+        }
         h4{
             color: #969696;
         }
